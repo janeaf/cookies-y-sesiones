@@ -1,0 +1,23 @@
+<?php
+  session_start();
+  error_reporting(0);
+  $sesion =$_SESSION['Usuario'];
+  if ($sesion == null || $sesion = '');{
+     echo 'No esta autorizado';
+     die();
+   }
+  
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" >
+   <title> Documento</title>
+</head>
+<body>
+   <h1>Panel de administracion</h1>
+   <h2>Bienvenido: <?php echo $_SESSION['Usuario'] ?></h2>
+   <a href="cerrar.php">Cerrar sesión</a>
+</body>
+</html>
